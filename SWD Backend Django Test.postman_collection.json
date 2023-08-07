@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "91ae00f5-5e4a-4937-8f0e-23584934c8ba",
+		"name": "SWD Backend Django Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14820616"
+	},
+	"item": [
+		{
+			"name": "Todo API",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8000/api/todos"
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE Todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Test todo completed\",\r\n    \"description\": \"Test description 2\",\r\n    \"completed\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/todos"
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Todo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Edited Test todo1\",\r\n    \"description\": \"Edited Todo description 1\",\r\n    \"completed\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/todos/1"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Todo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Edited Test todo1\",\r\n    \"description\": \"Edited Todo description 1\",\r\n    \"completed\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/todos/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "School API",
+			"item": [
+				{
+					"name": "POST Student Subject Score",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Felicia\",\r\n    \"last_name\": \"Murphy\",\r\n    \"subject_title\": \"Physics\",\r\n    \"score\": 68\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/student_score/"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Student Subject Score Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Felicia\",\r\n    \"last_name\": \"Murphy\",\r\n    \"subject_title\": \"Physics\",\r\n    \"score\": 68\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/student_score/1"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Personnel Details by School title",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Felicia\",\r\n    \"last_name\": \"Murphy\",\r\n    \"subject_title\": \"Physics\",\r\n    \"score\": 68\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/personnel_details/Dorm Palace School"
+					},
+					"response": []
+				},
+				{
+					"name": "GET School Hierarchy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Felicia\",\r\n    \"last_name\": \"Murphy\",\r\n    \"subject_title\": \"Physics\",\r\n    \"score\": 68\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/school_hierarchy/"
+					},
+					"response": []
+				},
+				{
+					"name": "GET School Structure",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Felicia\",\r\n    \"last_name\": \"Murphy\",\r\n    \"subject_title\": \"Physics\",\r\n    \"score\": 68\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/school_structure/"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
